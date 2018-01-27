@@ -27,8 +27,17 @@ function viewCart() {
     var itemNames = Object.keys(cart);
     for(var i = 0; i < cart.length; i++)
     {
-      inCart += `${itemNames[i]} at ${cart[i][itemNames[i]]`;
+      inCart += `${itemNames[i]} at ${cart[i][itemNames[i]]}`;
+      if(cart.length >= 3 && i < cart.length - 1)
+      {
+        inCart += ', ';
+      }
+      if(cart.length >= 2 && i === cart.length -2){
+        inCart += 'and ';
+      }
     }
+    inCart += '.'
+    return inCart;
   }
 }
 
