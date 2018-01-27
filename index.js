@@ -37,7 +37,7 @@ function viewCart() {
       }
     }
     inCart += '.'
-    return inCart;
+    console.log(inCart);
   }
 }
 
