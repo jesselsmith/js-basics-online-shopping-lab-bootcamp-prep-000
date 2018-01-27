@@ -25,7 +25,6 @@ function viewCart() {
   }else{
     var inCart = "In your cart, you have ";
     var itemNames = Object.keys(cart);
-    var prices = Object.values(cart);
     for(var i = 0; i < cart.length; i++)
     {
       inCart += `${itemNames[i]} at $${prices[i]}`;
