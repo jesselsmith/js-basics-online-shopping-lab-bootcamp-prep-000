@@ -26,7 +26,7 @@ function viewCart() {
     var inCart = "In your cart, you have ";
     for(var i = 0; i < cart.length; i++)
     {
-      inCart += `${cart[i].}`;
+      inCart += `${Object.keys(cart[i])}`;
     }
   }
 }
