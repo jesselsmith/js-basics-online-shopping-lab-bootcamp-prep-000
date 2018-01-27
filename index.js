@@ -31,6 +31,10 @@ function viewCart() {
       {
         inCart += ', ';
       }
+      if(cart.length === 2 && i === 0)
+      {
+        inCart += ' ';
+      }
       if(cart.length >= 2 && i === cart.length -2){
         inCart += 'and ';
       }
