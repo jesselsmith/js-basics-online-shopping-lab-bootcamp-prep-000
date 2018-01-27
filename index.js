@@ -44,9 +44,9 @@ function viewCart() {
 function total() {
   // write your code here
   var totalPrice = 0;
-  var itemNames = Object.keys(cart);
+  var prices = Object.values(cart);
   for(var i = 0; i < cart.length; i++){
-    totalPrice += cart[i][itemNames[i]];
+    totalPrice += prices[i];
   }
   return totalPrice;
 }
