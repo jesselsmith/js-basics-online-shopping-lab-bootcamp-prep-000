@@ -24,9 +24,10 @@ function viewCart() {
     console.log("Your shopping cart is empty.");
   }else{
     var inCart = "In your cart, you have ";
+    var itemNames = Object.keys(cart);
     for(var i = 0; i < cart.length; i++)
     {
-      inCart += `${Object.keys(cart[i])}`;
+      inCart += `${itemNames[i]} at`;
     }
   }
 }
