@@ -24,10 +24,11 @@ function viewCart() {
     console.log("Your shopping cart is empty.");
   }else{
     var inCart = "In your cart, you have ";
-    var itemNames = Object.keys(cart);
+    var itemNames = [];
     var prices = [];
     for(var i = 0; i < cart.length; i++)
     {
+      itemNames.push(Object.keys(cart[i])[0]);
       prices.push(Object.values(cart[i])[0]);
       inCart += `${itemNames[i]} at $${prices[i]}`;
       if(cart.length >= 3 && i < cart.length - 1)
