@@ -25,8 +25,10 @@ function viewCart() {
   }else{
     var inCart = "In your cart, you have ";
     var itemNames = Object.keys(cart);
+    var prices = [];
     for(var i = 0; i < cart.length; i++)
     {
+      prices.push(Object.values(cart[i])[0]);
       inCart += `${itemNames[i]} at $${prices[i]}`;
       if(cart.length >= 3 && i < cart.length - 1)
       {
@@ -44,8 +46,9 @@ function viewCart() {
 function total() {
   // write your code here
   var totalPrice = 0;
-  var prices = Object.values(cart);
+  var prices = [];
   for(var i = 0; i < cart.length; i++){
+    prices.push(Object.values(cart[i])[0]);
     totalPrice += prices[i];
   }
   return totalPrice;
