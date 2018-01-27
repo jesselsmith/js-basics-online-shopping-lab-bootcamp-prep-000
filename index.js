@@ -27,7 +27,7 @@ function viewCart() {
     var itemNames = Object.keys(cart);
     for(var i = 0; i < cart.length; i++)
     {
-      inCart += `${itemNames[i]} at ${cart[i`;
+      inCart += `${itemNames[i]} at ${cart[i]`;
     }
   }
 }
